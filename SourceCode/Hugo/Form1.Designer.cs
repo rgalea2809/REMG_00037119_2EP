@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.userLoginCombobox = new System.Windows.Forms.ComboBox();
+            this.goTocp = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.userLoginCombobox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.goTocp, 1, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -138,6 +140,21 @@
             this.userLoginCombobox.Size = new System.Drawing.Size(214, 24);
             this.userLoginCombobox.TabIndex = 6;
             // 
+            // goTocp
+            // 
+            this.goTocp.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.goTocp.BackColor = System.Drawing.Color.Transparent;
+            this.goTocp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.goTocp.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.goTocp.ForeColor = System.Drawing.Color.White;
+            this.goTocp.Location = new System.Drawing.Point(269, 371);
+            this.goTocp.Name = "goTocp";
+            this.goTocp.Size = new System.Drawing.Size(260, 43);
+            this.goTocp.TabIndex = 7;
+            this.goTocp.Text = "Cambiar Contraseña";
+            this.goTocp.UseVisualStyleBackColor = false;
+            this.goTocp.Click += new System.EventHandler(this.goTocp_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -153,6 +170,7 @@
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Button goTocp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button LoginButton;

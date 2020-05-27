@@ -88,6 +88,19 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="adminWF.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="adminWF.Designer.cs">
+          <DependentUpon>adminWF.cs</DependentUpon>
+        </Compile>
+        <Compile Include="changePwd.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="changePwd.Designer.cs">
+          <DependentUpon>changePwd.cs</DependentUpon>
+        </Compile>
+        <Compile Include="DataAccessObjects\AbstractDAO.cs" />
         <Compile Include="DataAccessObjects\appUserDAO.cs" />
         <Compile Include="DataAccessObjects\dbHelper.cs" />
         <Compile Include="databaseObjects\Usuario.cs" />
@@ -99,6 +112,12 @@
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <EmbeddedResource Include="adminWF.resx">
+          <DependentUpon>adminWF.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="changePwd.resx">
+          <DependentUpon>changePwd.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
         </EmbeddedResource>

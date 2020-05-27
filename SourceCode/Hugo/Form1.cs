@@ -32,15 +32,13 @@ namespace Hugo
             if (userLoginCombobox.SelectedValue.Equals(passwordloginTextbox.Text))
             {
                 Usuario u = (Usuario) userLoginCombobox.SelectedItem;
-                // MessageBox.Show("Bienvenido", ":)", MessageBoxButtons.OK,
-                //     MessageBoxIcon.Information);
                 if (u.userType)
                 {
-                    MessageBox.Show("ADMIN!");
+                    MessageBox.Show("ADMIN");
                 }
                 else
                 {
-                    MessageBox.Show("NORMAL!");
+                    MessageBox.Show("Bienvenido!");
                 }
             }
             else
@@ -50,6 +48,11 @@ namespace Hugo
             }
         }
 
-        
+        private void goTocp_Click(object sender, EventArgs e)
+        {
+            changePwd ventana = new changePwd();
+            ventana.Show();
+            this.Hide();
+        }
     }
 }
