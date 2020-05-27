@@ -26,6 +26,25 @@ namespace Hugo.DataAccessObjects
             return lista;
         }
 
+        public static DataTable getUsersDt()
+        {
+            string query = "SELECT * FROM appuser";
+            DataTable dt = dbHelper.ExecuteQuery(query: query);
+            return dt;
+        }
+
+        public static List<int> getUserAdresses(Usuario user)
+        {
+            string query = $"SELECT \"idAddress\" FROM address WHERE \"idUser\" = '{user.idUser}'";
+            DataTable dt = dbHelper.ExecuteQuery(query: query);
+            List<int> lista = new List<int>();
+            foreach (DataRow fila in dt.Rows)
+            {
+                lista.Add(Convert.ToInt16(fila[0].ToString()));
+            }
+            return lista;
+        }
+
         public static void setPassword(string nPassword, Usuario u)
         {
             try
@@ -36,7 +55,51 @@ namespace Hugo.DataAccessObjects
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 MessageBox.Show("Ha ocurrido un error. Intentelo de nuevo.");
+            }
+        }
+
+        public static void addUser(Usuario u)
+        {
+            try
+            {
+                string nQ = $"INSERT INTO appuser(fullname, username, password, \"userType\") VALUES(" +
+                            $"'{u.fullname}', " +
+                            $"'{u.username}', " +
+                            $"'{u.password}', " +
+                            $"'{u.userType}')";
+                dbHelper.ExecuteNonQuery(nQ);
+                MessageBox.Show($"Se ha agregado el usuario '{u.username}' correctamente");
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);Console.WriteLine(e.Message);
+                MessageBox.Show("Ha ocurrido un error. Intentelo de nuevo.");
+            }
+        }
+
+        public static void removeUser(Usuario u)
+        {
+            try
+            {
+                List<int> addressesIds = getUserAdresses(u);
+                foreach (var address in addressesIds)
+                {
+                    string nQ1 = $"DELETE FROM apporder WHERE \"idAddress\"= {address}";
+                    dbHelper.ExecuteNonQuery(nQ1);
+                }
+                string nQ = String.Format(
+                    $"DELETE FROM address WHERE \"idUser\"= {u.idUser} ;" +
+                    $"DELETE FROM appuser WHERE username = '{u.username}'");
+
+                dbHelper.ExecuteNonQuery(nQ);
+                MessageBox.Show("Se ha eliminado el usuario");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Ha ocurrido un error");
             }
         }
     }

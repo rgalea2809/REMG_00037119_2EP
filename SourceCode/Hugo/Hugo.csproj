@@ -33,6 +33,9 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Hugo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>bin\Debug\Hugo.exe</HintPath>
+        </Reference>
         <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
           <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
           <Private>True</Private>
@@ -88,6 +91,18 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AdminUC\negocios.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="AdminUC\negocios.Designer.cs">
+          <DependentUpon>negocios.cs</DependentUpon>
+        </Compile>
+        <Compile Include="AdminUC\usuarios.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="AdminUC\usuarios.Designer.cs">
+          <DependentUpon>usuarios.cs</DependentUpon>
+        </Compile>
         <Compile Include="adminWF.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -112,6 +127,12 @@
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <EmbeddedResource Include="AdminUC\negocios.resx">
+          <DependentUpon>negocios.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AdminUC\usuarios.resx">
+          <DependentUpon>usuarios.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="adminWF.resx">
           <DependentUpon>adminWF.cs</DependentUpon>
         </EmbeddedResource>
