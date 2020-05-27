@@ -31,58 +31,113 @@ namespace Hugo
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ordersbtn = new System.Windows.Forms.Button();
+            this.productbtn = new System.Windows.Forms.Button();
+            this.businessbtn = new System.Windows.Forms.Button();
+            this.usersrBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tableLayoutPanel1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
-            this.tabControl1.TabIndex = 0;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (55)))), ((int) (((byte) (28)))), ((int) (((byte) (95)))));
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.ordersbtn, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.productbtn, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.businessbtn, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.usersrBtn, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tabPage1
+            // ordersbtn
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 421);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Usuarios";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.ordersbtn.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.ordersbtn.AutoSize = true;
+            this.ordersbtn.BackColor = System.Drawing.Color.White;
+            this.ordersbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordersbtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.ordersbtn.Location = new System.Drawing.Point(605, 5);
+            this.ordersbtn.Margin = new System.Windows.Forms.Padding(5);
+            this.ordersbtn.Name = "ordersbtn";
+            this.ordersbtn.Size = new System.Drawing.Size(190, 35);
+            this.ordersbtn.TabIndex = 3;
+            this.ordersbtn.Text = "ORDENES";
+            this.ordersbtn.UseVisualStyleBackColor = false;
             // 
-            // tabPage2
+            // productbtn
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 421);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.productbtn.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.productbtn.AutoSize = true;
+            this.productbtn.BackColor = System.Drawing.Color.White;
+            this.productbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productbtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.productbtn.Location = new System.Drawing.Point(405, 5);
+            this.productbtn.Margin = new System.Windows.Forms.Padding(5);
+            this.productbtn.Name = "productbtn";
+            this.productbtn.Size = new System.Drawing.Size(190, 35);
+            this.productbtn.TabIndex = 2;
+            this.productbtn.Text = "PRODUCTOS";
+            this.productbtn.UseVisualStyleBackColor = false;
+            // 
+            // businessbtn
+            // 
+            this.businessbtn.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.businessbtn.AutoSize = true;
+            this.businessbtn.BackColor = System.Drawing.Color.White;
+            this.businessbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.businessbtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.businessbtn.Location = new System.Drawing.Point(205, 5);
+            this.businessbtn.Margin = new System.Windows.Forms.Padding(5);
+            this.businessbtn.Name = "businessbtn";
+            this.businessbtn.Size = new System.Drawing.Size(190, 35);
+            this.businessbtn.TabIndex = 1;
+            this.businessbtn.Text = "NEGOCIOS";
+            this.businessbtn.UseVisualStyleBackColor = false;
+            // 
+            // usersrBtn
+            // 
+            this.usersrBtn.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.usersrBtn.AutoSize = true;
+            this.usersrBtn.BackColor = System.Drawing.Color.White;
+            this.usersrBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.usersrBtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.usersrBtn.Location = new System.Drawing.Point(5, 5);
+            this.usersrBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.usersrBtn.Name = "usersrBtn";
+            this.usersrBtn.Size = new System.Drawing.Size(190, 35);
+            this.usersrBtn.TabIndex = 0;
+            this.usersrBtn.Text = "USUARIOS";
+            this.usersrBtn.UseVisualStyleBackColor = false;
             // 
             // adminWF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "adminWF";
-            this.Text = "adminWF";
-            this.tabControl1.ResumeLayout(false);
+            this.Text = "Administrador";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button businessbtn;
+        private System.Windows.Forms.Button ordersbtn;
+        private System.Windows.Forms.Button productbtn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button usersrBtn;
 
         #endregion
     }

@@ -18,7 +18,16 @@ namespace Hugo
         {
             InitializeComponent();
         }
-        
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Quieres salir de la Aplicacion?", 
+                "Exit", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             userLoginCombobox.DataSource = null;
@@ -35,6 +44,9 @@ namespace Hugo
                 if (u.userType)
                 {
                     MessageBox.Show("ADMIN");
+                    adminWF ventanaAdmin = new adminWF();
+                    ventanaAdmin.Show();
+                    this.Hide();
                 }
                 else
                 {
