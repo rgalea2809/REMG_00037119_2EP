@@ -14,7 +14,7 @@ namespace Hugo.AdminUC
         }
         private void usuarios_Load(object sender, EventArgs e)
         {
-            // LoadObjects();
+            LoadObjects();
             this.Dock = DockStyle.Fill;
         }
         private void createuserbtn_Click(object sender, EventArgs e)

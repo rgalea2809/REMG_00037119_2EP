@@ -117,7 +117,9 @@
         </Compile>
         <Compile Include="DataAccessObjects\AbstractDAO.cs" />
         <Compile Include="DataAccessObjects\appUserDAO.cs" />
+        <Compile Include="DataAccessObjects\businessDAO.cs" />
         <Compile Include="DataAccessObjects\dbHelper.cs" />
+        <Compile Include="databaseObjects\Negocio.cs" />
         <Compile Include="databaseObjects\Usuario.cs" />
         <Compile Include="Form1.cs">
             <SubType>Form</SubType>

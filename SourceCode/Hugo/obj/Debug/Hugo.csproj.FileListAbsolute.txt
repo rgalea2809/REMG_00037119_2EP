@@ -32,3 +32,4 @@ C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\De
 C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.csproj.CopyComplete
 C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.exe
 C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.pdb
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.AdminUC.negocios.resources

@@ -31,18 +31,20 @@ namespace Hugo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminWF));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ordersbtn = new System.Windows.Forms.Button();
             this.productbtn = new System.Windows.Forms.Button();
             this.businessbtn = new System.Windows.Forms.Button();
             this.usersrBtn = new System.Windows.Forms.Button();
-            this.usuarios1 = new Hugo.AdminUC.usuarios();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (55)))), ((int) (((byte) (28)))), ((int) (((byte) (95)))));
+            this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("tableLayoutPanel1.BackgroundImage")));
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -52,7 +54,6 @@ namespace Hugo
             this.tableLayoutPanel1.Controls.Add(this.productbtn, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.businessbtn, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.usersrBtn, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.usuarios1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -110,6 +111,7 @@ namespace Hugo
             this.businessbtn.TabIndex = 1;
             this.businessbtn.Text = "NEGOCIOS";
             this.businessbtn.UseVisualStyleBackColor = false;
+            this.businessbtn.Click += new System.EventHandler(this.businessbtn_Click);
             // 
             // usersrBtn
             // 
@@ -127,15 +129,6 @@ namespace Hugo
             this.usersrBtn.Text = "USUARIOS";
             this.usersrBtn.UseVisualStyleBackColor = false;
             this.usersrBtn.Click += new System.EventHandler(this.usersrBtn_Click);
-            // 
-            // usuarios1
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.usuarios1, 4);
-            this.usuarios1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usuarios1.Location = new System.Drawing.Point(3, 48);
-            this.usuarios1.Name = "usuarios1";
-            this.usuarios1.Size = new System.Drawing.Size(794, 399);
-            this.usuarios1.TabIndex = 4;
             // 
             // adminWF
             // 
@@ -155,7 +148,6 @@ namespace Hugo
         private System.Windows.Forms.Button productbtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button usersrBtn;
-        private Hugo.AdminUC.usuarios usuarios1;
 
         #endregion
     }
