@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hugo.DataAccessObjects;
+using Hugo.databaseObjects;
 
 namespace Hugo
 {
@@ -16,5 +18,38 @@ namespace Hugo
         {
             InitializeComponent();
         }
+        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            userLoginCombobox.DataSource = null;
+            userLoginCombobox.ValueMember = "password"; 
+            userLoginCombobox.DisplayMember = "username";
+            userLoginCombobox.DataSource = appUserDAO.getUsers();
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            if (userLoginCombobox.SelectedValue.Equals(passwordloginTextbox.Text))
+            {
+                Usuario u = (Usuario) userLoginCombobox.SelectedItem;
+                // MessageBox.Show("Bienvenido", ":)", MessageBoxButtons.OK,
+                //     MessageBoxIcon.Information);
+                if (u.userType)
+                {
+                    MessageBox.Show("ADMIN!");
+                }
+                else
+                {
+                    MessageBox.Show("NORMAL!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Contraseña incorrecta!", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+            }
+        }
+
+        
     }
 }
