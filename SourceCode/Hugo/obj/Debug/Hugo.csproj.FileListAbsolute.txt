@@ -38,3 +38,12 @@ C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\De
 C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.NormalUC.direcciones.resources
 C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.normalUserWF.resources
 C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.NormalUC.ordenesNormal.resources
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\bin\Debug\LiveCharts.dll
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\bin\Debug\LiveCharts.pdb
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\bin\Debug\LiveCharts.xml
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\bin\Debug\LiveCharts.Wpf.xml

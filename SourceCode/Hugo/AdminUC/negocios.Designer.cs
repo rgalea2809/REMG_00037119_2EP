@@ -48,6 +48,7 @@ namespace Hugo.AdminUC
             this.label4 = new System.Windows.Forms.Label();
             this.negociosCB = new System.Windows.Forms.ComboBox();
             this.rmvNegociobtn = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -61,6 +62,7 @@ namespace Hugo.AdminUC
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -266,6 +268,15 @@ namespace Hugo.AdminUC
             this.rmvNegociobtn.UseVisualStyleBackColor = false;
             this.rmvNegociobtn.Click += new System.EventHandler(this.rmvNegociobtn_Click);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(826, 489);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Grafica";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // negocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -301,6 +312,7 @@ namespace Hugo.AdminUC
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
 
         #endregion
     }

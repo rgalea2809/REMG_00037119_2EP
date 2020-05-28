@@ -81,5 +81,24 @@ namespace Hugo.DataAccessObjects
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
+        
+        public static List<conxprod> getPiechartInfo()
+        {
+            string Q = "SELECT b.name AS Negocio, sum(cp.cant) AS Totalpedidos " +
+                       "FROM BUSINESS b, (SELECT p.idBusiness, p.name, count(ap.idProduct) AS cant " +
+                       "FROM PRODUCT p, APPORDER ap WHERE p.idProduct = ap.idProduct GROUP BY p.idProduct ORDER BY p.name ASC) AS cp " +
+                       "WHERE b.idBusiness = cp.idBusiness GROUP BY b.idBusiness;";
+            DataTable dt = dbHelper.ExecuteQuery(query: Q);
+            List<conxprod> lista = new List<conxprod>();
+            foreach (DataRow fila in dt.Rows)
+            {
+                conxprod u = new conxprod();
+                u.nombre = fila[0].ToString();
+                u.cantidad = Convert.ToInt16(fila[1].ToString());
+                lista.Add(u);
+            }
+            return lista;
+        }
+        
     }
 }

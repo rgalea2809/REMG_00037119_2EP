@@ -2,15 +2,27 @@
 using System.Windows.Forms;
 using Hugo.DataAccessObjects;
 using Hugo.databaseObjects;
+using LiveCharts;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using LiveCharts;
+using LiveCharts.Wpf;
+using LiveCharts.WinForms;
+using PieChart = LiveCharts.WinForms.PieChart;
 
 namespace Hugo.AdminUC
 {
     public partial class negocios : UserControl
     {
+        private PieChart graficoPastel;
         public negocios()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
+            graficoPastel = new PieChart();
+            this.Controls.Add(graficoPastel);
+            graficoPastel.Parent = tabControl1.TabPages[2];
         }
         private void negocios_Load(object sender, EventArgs e)
         {
@@ -33,6 +45,27 @@ namespace Hugo.AdminUC
             negociosCB.ValueMember = "idBusiness"; 
             negociosCB.DisplayMember = "name";
             negociosCB.DataSource = businessDAO.getBusiness();
+            configPiechart();
+        }
+        
+        private void configPiechart()
+        {
+            graficoPastel.Top = 20;
+            graficoPastel.Left = 20;
+            graficoPastel.Width = 400;
+            graficoPastel.Height = 400;
+
+            List<conxprod> lista = businessDAO.getPiechartInfo();
+            
+            SeriesCollection serie = new SeriesCollection();
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                serie.Add(new PieSeries {Title = lista[i].nombre, Values = new ChartValues<int> {lista[i].cantidad}, DataLabels = true});
+            }
+            graficoPastel.Series = serie;
+            graficoPastel.LegendLocation = LegendLocation.Bottom;
+
         }
     }
 }
