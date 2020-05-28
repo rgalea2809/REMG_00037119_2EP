@@ -11,6 +11,7 @@ namespace Hugo
         private usuarios users = new usuarios();
         private negocios business = new negocios();
         private productos products = new productos();
+        private ordenes orders = new ordenes();
         public adminWF()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Hugo
             tableLayoutPanel1.SetColumnSpan(current, 4);
         }
         private void businessbtn_Click(object sender, EventArgs e)
-        {
+        { 
             tableLayoutPanel1.Controls.Remove(current);
             tableLayoutPanel1.Controls.Add(business, 0, 1);
             current = business;
@@ -33,11 +34,19 @@ namespace Hugo
         }
 
         private void productbtn_Click(object sender, EventArgs e)
-        {
+        { 
             tableLayoutPanel1.Controls.Remove(current);
             tableLayoutPanel1.Controls.Add(products, 0, 1);
             current = products;
             tableLayoutPanel1.SetColumnSpan(products, 4);
+        }
+
+        private void ordersbtn_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.Controls.Remove(current);
+            tableLayoutPanel1.Controls.Add(orders, 0, 1);
+            current = orders;
+            tableLayoutPanel1.SetColumnSpan(orders, 4);
         }
     }
 }

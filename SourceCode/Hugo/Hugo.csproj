@@ -97,6 +97,12 @@
         <Compile Include="AdminUC\negocios.Designer.cs">
           <DependentUpon>negocios.cs</DependentUpon>
         </Compile>
+        <Compile Include="AdminUC\ordenes.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="AdminUC\ordenes.Designer.cs">
+          <DependentUpon>ordenes.cs</DependentUpon>
+        </Compile>
         <Compile Include="AdminUC\productos.cs">
           <SubType>UserControl</SubType>
         </Compile>
@@ -123,11 +129,13 @@
         </Compile>
         <Compile Include="CustomExceptions\EmptyInputFieldException.cs" />
         <Compile Include="DataAccessObjects\AbstractDAO.cs" />
+        <Compile Include="DataAccessObjects\apporderDAO.cs" />
         <Compile Include="DataAccessObjects\appUserDAO.cs" />
         <Compile Include="DataAccessObjects\businessDAO.cs" />
         <Compile Include="DataAccessObjects\dbHelper.cs" />
         <Compile Include="DataAccessObjects\productsDAO.cs" />
         <Compile Include="databaseObjects\Negocio.cs" />
+        <Compile Include="databaseObjects\Orden.cs" />
         <Compile Include="databaseObjects\Producto.cs" />
         <Compile Include="databaseObjects\Usuario.cs" />
         <Compile Include="Form1.cs">
@@ -140,6 +148,9 @@
         <Compile Include="Properties\AssemblyInfo.cs" />
         <EmbeddedResource Include="AdminUC\negocios.resx">
           <DependentUpon>negocios.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AdminUC\ordenes.resx">
+          <DependentUpon>ordenes.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="AdminUC\productos.resx">
           <DependentUpon>productos.cs</DependentUpon>

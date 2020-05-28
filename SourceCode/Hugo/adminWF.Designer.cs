@@ -79,6 +79,7 @@ namespace Hugo
             this.ordersbtn.TabIndex = 3;
             this.ordersbtn.Text = "ORDENES";
             this.ordersbtn.UseVisualStyleBackColor = false;
+            this.ordersbtn.Click += new System.EventHandler(this.ordersbtn_Click);
             // 
             // productbtn
             // 
