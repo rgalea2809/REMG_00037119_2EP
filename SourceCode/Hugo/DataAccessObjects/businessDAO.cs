@@ -81,12 +81,12 @@ namespace Hugo.DataAccessObjects
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
-        
         public static List<conxprod> getPiechartInfo()
         {
             string Q = "SELECT b.name AS Negocio, sum(cp.cant) AS Totalpedidos " +
                        "FROM BUSINESS b, (SELECT p.idBusiness, p.name, count(ap.idProduct) AS cant " +
-                       "FROM PRODUCT p, APPORDER ap WHERE p.idProduct = ap.idProduct GROUP BY p.idProduct ORDER BY p.name ASC) AS cp " +
+                       "FROM PRODUCT p, APPORDER ap WHERE p.idProduct = ap.idProduct GROUP BY p.idProduct " +
+                       "ORDER BY p.name ASC) AS cp " +
                        "WHERE b.idBusiness = cp.idBusiness GROUP BY b.idBusiness;";
             DataTable dt = dbHelper.ExecuteQuery(query: Q);
             List<conxprod> lista = new List<conxprod>();
@@ -99,6 +99,5 @@ namespace Hugo.DataAccessObjects
             }
             return lista;
         }
-        
     }
 }

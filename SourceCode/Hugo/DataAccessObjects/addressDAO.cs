@@ -8,23 +8,7 @@ using Hugo.databaseObjects;
 namespace Hugo.DataAccessObjects
 {
     public class addressDAO
-    {
-        public static List<Direccion> getAdress()
-        {
-            string query = "SELECT * FROM address";
-            DataTable dt = dbHelper.ExecuteQuery(query: query);
-            List<Direccion> lista = new List<Direccion>();
-            foreach (DataRow fila in dt.Rows)
-            {
-                Direccion d = new Direccion();
-                d.idAddress = Convert.ToInt16(fila[0].ToString());
-                d.idUser = Convert.ToInt16(fila[1].ToString());
-                d.address = fila[2].ToString();
-                lista.Add(d);
-            }
-            return lista;
-        }
-        
+    { 
         public static List<Direccion> getUserAddress(Usuario u)
         {
             string query = $"SELECT * FROM address WHERE idUser = '{u.idUser}'";
@@ -39,13 +23,6 @@ namespace Hugo.DataAccessObjects
                 lista.Add(d);
             }
             return lista;
-        }
-        
-        public static DataTable getAddressdt()
-        {
-            string query = "SELECT * FROM address";
-            DataTable dt = dbHelper.ExecuteQuery(query: query);
-            return dt;
         }
         
         public static DataTable getUserAddressdt(Usuario u)
@@ -122,6 +99,5 @@ namespace Hugo.DataAccessObjects
                 MessageBox.Show("Ha ocurrido un error. Intentelo de nuevo.");
             }
         }
-      
     }
 }

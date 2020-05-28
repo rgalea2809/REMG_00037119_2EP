@@ -67,6 +67,5 @@ namespace Hugo.DataAccessObjects
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
-       
     }
 }

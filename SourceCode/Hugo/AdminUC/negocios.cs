@@ -61,7 +61,8 @@ namespace Hugo.AdminUC
 
             for (int i = 0; i < lista.Count; i++)
             {
-                serie.Add(new PieSeries {Title = lista[i].nombre, Values = new ChartValues<int> {lista[i].cantidad}, DataLabels = true});
+                serie.Add(new PieSeries {Title = lista[i].nombre, 
+                    Values = new ChartValues<int> {lista[i].cantidad}, DataLabels = true});
             }
             graficoPastel.Series = serie;
             graficoPastel.LegendLocation = LegendLocation.Bottom;

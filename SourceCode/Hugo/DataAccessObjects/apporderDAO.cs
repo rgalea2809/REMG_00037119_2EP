@@ -72,7 +72,6 @@ namespace Hugo.DataAccessObjects
                 MessageBox.Show("Ha ocurrido un error. Intentelo de nuevo.");
             }
         }
-
         public static void removeUserOrder(int idOrder)
         {
             try
@@ -86,8 +85,5 @@ namespace Hugo.DataAccessObjects
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
-        
-        
-            
     }
 }
