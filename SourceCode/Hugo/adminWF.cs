@@ -10,6 +10,7 @@ namespace Hugo
         private UserControl current;
         private usuarios users = new usuarios();
         private negocios business = new negocios();
+        private productos products = new productos();
         public adminWF()
         {
             InitializeComponent();
@@ -29,6 +30,14 @@ namespace Hugo
             tableLayoutPanel1.Controls.Add(business, 0, 1);
             current = business;
             tableLayoutPanel1.SetColumnSpan(current, 4);
+        }
+
+        private void productbtn_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.Controls.Remove(current);
+            tableLayoutPanel1.Controls.Add(products, 0, 1);
+            current = products;
+            tableLayoutPanel1.SetColumnSpan(products, 4);
         }
     }
 }

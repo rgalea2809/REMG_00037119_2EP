@@ -95,6 +95,7 @@ namespace Hugo
             this.productbtn.TabIndex = 2;
             this.productbtn.Text = "PRODUCTOS";
             this.productbtn.UseVisualStyleBackColor = false;
+            this.productbtn.Click += new System.EventHandler(this.productbtn_Click);
             // 
             // businessbtn
             // 
