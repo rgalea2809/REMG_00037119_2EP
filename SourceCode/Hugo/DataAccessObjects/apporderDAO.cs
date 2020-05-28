@@ -9,21 +9,13 @@ namespace Hugo.DataAccessObjects
 {
     public class apporderDAO
     {
-        public static List<Orden> getOrders()
+        public static DataTable getOrders()
         {
-            string query = "SELECT * FROM apporder";
-            DataTable dt = dbHelper.ExecuteQuery(query: query);
-            List<Orden> lista = new List<Orden>();
-            foreach (DataRow fila in dt.Rows)
-            {
-                Orden o = new Orden();
-                o.idOrder = Convert.ToInt16(fila[0].ToString());
-                o.createDate = DateTime.Parse(fila[1].ToString());
-                o.idProduct = Convert.ToInt16(fila[2].ToString());
-                o.idAddress = Convert.ToInt16(fila[3].ToString());
-                lista.Add(o);
-            }
-            return lista;
+            string Q = $"SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, ad.address FROM APPORDER ao, " +
+                       $"ADDRESS ad, PRODUCT pr, APPUSER au WHERE ao.idProduct = pr.idProduct " +
+                       $"AND ao.idAddress = ad.idAddress AND ad.idUser = au.idUser;";
+            DataTable dt = dbHelper.ExecuteQuery(query: Q);
+            return dt;
         }
         public static List<Orden> getUserOrdersIDS(Usuario u)
         {

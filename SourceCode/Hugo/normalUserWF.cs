@@ -19,6 +19,15 @@ namespace Hugo
             ordenes = new ordenesNormal(user);
             InitializeComponent();
         }
+        
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Quieres salir de la Aplicacion?", 
+                "Exit", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
 
         private void direccionesbtn_Click(object sender, EventArgs e)
         {
