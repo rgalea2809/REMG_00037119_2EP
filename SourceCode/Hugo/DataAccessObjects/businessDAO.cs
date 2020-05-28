@@ -25,7 +25,7 @@ namespace Hugo.DataAccessObjects
         }
         public static List<int> getBusinessProducts(string negocio, int idBusiness)
         {
-            string query = $"SELECT \"idProduct\" FROM product WHERE \"idBusiness\" = {idBusiness}";
+            string query = $"SELECT idProduct FROM product WHERE idBusiness = {idBusiness}";
             DataTable dt = dbHelper.ExecuteQuery(query: query);
             List<int> lista = new List<int>();
             foreach (DataRow fila in dt.Rows)
@@ -65,11 +65,11 @@ namespace Hugo.DataAccessObjects
                 List<int> productsIds = getBusinessProducts(name, idbusiness);
                 foreach (var product in productsIds)
                 {
-                    string nQ1 = $"DELETE FROM apporder WHERE \"idProduct\"= {product}";
+                    string nQ1 = $"DELETE FROM apporder WHERE idProduct= {product}";
                     dbHelper.ExecuteNonQuery(nQ1);
                 }
                 string nQ = String.Format(
-                    $"DELETE FROM product WHERE \"idBusiness\"= {idbusiness} ;" +
+                    $"DELETE FROM product WHERE idBusiness= {idbusiness} ;" +
                     $"DELETE FROM business WHERE name = '{name}'");
 
                 dbHelper.ExecuteNonQuery(nQ);

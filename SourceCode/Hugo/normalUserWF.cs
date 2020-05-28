@@ -10,11 +10,13 @@ namespace Hugo
         private Usuario user = new Usuario();
         private UserControl current;
         private direcciones direcciones;
+        private ordenesNormal ordenes;
         public normalUserWF(Usuario u)
         {
             current = null;
             user = u;
             direcciones = new direcciones(user);
+            ordenes = new ordenesNormal(user);
             InitializeComponent();
         }
 
@@ -28,7 +30,10 @@ namespace Hugo
 
         private void ordenesbtn_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            tableLayoutPanel1.Controls.Remove(current);
+            tableLayoutPanel1.Controls.Add(ordenes, 0, 1);
+            current = ordenes;
+            tableLayoutPanel1.SetColumnSpan(current, 4);
         }
     }
 }

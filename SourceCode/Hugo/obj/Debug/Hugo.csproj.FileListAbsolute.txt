@@ -37,3 +37,4 @@ C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\De
 C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.AdminUC.ordenes.resources
 C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.NormalUC.direcciones.resources
 C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.normalUserWF.resources
+C:\Users\Rodrigo Mejia\Desktop\Parcial2\REMG_00037119_2EP\SourceCode\Hugo\obj\Debug\Hugo.NormalUC.ordenesNormal.resources

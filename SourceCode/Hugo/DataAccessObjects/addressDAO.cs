@@ -25,9 +25,32 @@ namespace Hugo.DataAccessObjects
             return lista;
         }
         
+        public static List<Direccion> getUserAddress(Usuario u)
+        {
+            string query = $"SELECT * FROM address WHERE idUser = '{u.idUser}'";
+            DataTable dt = dbHelper.ExecuteQuery(query: query);
+            List<Direccion> lista = new List<Direccion>();
+            foreach (DataRow fila in dt.Rows)
+            {
+                Direccion d = new Direccion();
+                d.idAddress = Convert.ToInt16(fila[0].ToString());
+                d.idUser = Convert.ToInt16(fila[1].ToString());
+                d.address = fila[2].ToString();
+                lista.Add(d);
+            }
+            return lista;
+        }
+        
         public static DataTable getAddressdt()
         {
             string query = "SELECT * FROM address";
+            DataTable dt = dbHelper.ExecuteQuery(query: query);
+            return dt;
+        }
+        
+        public static DataTable getUserAddressdt(Usuario u)
+        {
+            string query = $"SELECT * FROM address WHERE idUser = '{u.idUser}'";
             DataTable dt = dbHelper.ExecuteQuery(query: query);
             return dt;
         }
@@ -41,7 +64,7 @@ namespace Hugo.DataAccessObjects
                     throw new EmptyInputFieldException("No deje cmapos vacios!");
                 }
 
-                string nQ = $"INSERT INTO address(\"idUser\", address) VALUES(" +
+                string nQ = $"INSERT INTO address(idUser, address) VALUES(" +
                             $"{idUser}, " +
                             $"'{address}')";
                 dbHelper.ExecuteNonQuery(nQ);
@@ -64,8 +87,8 @@ namespace Hugo.DataAccessObjects
             try
             {
                 string nQ = String.Format(
-                    $"DELETE FROM apporder WHERE \"idAddress\"= {idAddress}; "+
-                    $"DELETE FROM address WHERE \"idAddress\" = {idAddress}");
+                    $"DELETE FROM apporder WHERE idAddress= {idAddress}; "+
+                    $"DELETE FROM address WHERE idAddress = {idAddress}");
                 dbHelper.ExecuteNonQuery(nQ);
                 MessageBox.Show("Se ha eliminado la direccion de la base datos, " +
                                 "al igual que las ordenes relacionadas.");
@@ -85,7 +108,7 @@ namespace Hugo.DataAccessObjects
                     throw new EmptyInputFieldException("Por favor ingrese una nueva direccion!");
                 }
 
-                string nQ = $"UPDATE address SET address = '{nAddress}' WHERE \"idAddress\" = {idAddress} ";
+                string nQ = $"UPDATE address SET address = '{nAddress}' WHERE idAddress = {idAddress} ";
                 dbHelper.ExecuteNonQuery(nQ);
                 MessageBox.Show($"Se ha actualizado la Direccion de '{nAddress}' exitosamente");
             }

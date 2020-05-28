@@ -35,7 +35,7 @@ namespace Hugo.DataAccessObjects
 
         public static List<int> getUserAdresses(Usuario user)
         {
-            string query = $"SELECT \"idAddress\" FROM address WHERE \"idUser\" = '{user.idUser}'";
+            string query = $"SELECT idAddress FROM address WHERE idUser = '{user.idUser}'";
             DataTable dt = dbHelper.ExecuteQuery(query: query);
             List<int> lista = new List<int>();
             foreach (DataRow fila in dt.Rows)
@@ -49,7 +49,7 @@ namespace Hugo.DataAccessObjects
         {
             try
             {
-                string nQ = $"UPDATE appuser SET password = '{nPassword}' WHERE \"idUser\" = {u.idUser} ";
+                string nQ = $"UPDATE appuser SET password = '{nPassword}' WHERE idUser = {u.idUser} ";
                 dbHelper.ExecuteNonQuery(nQ);
                 MessageBox.Show($"Se ha actualizado la contraseña de '{u.fullname}' exitosamente");
             }
@@ -64,7 +64,7 @@ namespace Hugo.DataAccessObjects
         {
             try
             {
-                string nQ = $"INSERT INTO appuser(fullname, username, password, \"userType\") VALUES(" +
+                string nQ = $"INSERT INTO appuser(fullname, username, password, userType) VALUES(" +
                             $"'{u.fullname}', " +
                             $"'{u.username}', " +
                             $"'{u.password}', " +
@@ -87,11 +87,11 @@ namespace Hugo.DataAccessObjects
                 List<int> addressesIds = getUserAdresses(u);
                 foreach (var address in addressesIds)
                 {
-                    string nQ1 = $"DELETE FROM apporder WHERE \"idAddress\"= {address}";
+                    string nQ1 = $"DELETE FROM apporder WHERE idAddress= {address}";
                     dbHelper.ExecuteNonQuery(nQ1);
                 }
                 string nQ = String.Format(
-                    $"DELETE FROM address WHERE \"idUser\"= {u.idUser} ;" +
+                    $"DELETE FROM address WHERE idUser= {u.idUser} ;" +
                     $"DELETE FROM appuser WHERE username = '{u.username}'");
 
                 dbHelper.ExecuteNonQuery(nQ);

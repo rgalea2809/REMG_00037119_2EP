@@ -370,7 +370,7 @@ namespace Hugo.NormalUC
             this.modcb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.modcb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.modcb.FormattingEnabled = true;
-            this.modcb.Location = new System.Drawing.Point(326, 175);
+            this.modcb.Location = new System.Drawing.Point(326, 176);
             this.modcb.Name = "modcb";
             this.modcb.Size = new System.Drawing.Size(186, 24);
             this.modcb.TabIndex = 6;

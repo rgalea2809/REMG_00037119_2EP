@@ -139,6 +139,7 @@
         <Compile Include="databaseObjects\Negocio.cs" />
         <Compile Include="databaseObjects\Orden.cs" />
         <Compile Include="databaseObjects\Producto.cs" />
+        <Compile Include="databaseObjects\UserOrder.cs" />
         <Compile Include="databaseObjects\Usuario.cs" />
         <Compile Include="Form1.cs">
             <SubType>Form</SubType>

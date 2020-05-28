@@ -44,15 +44,15 @@ namespace Hugo.NormalUC
             rmvAddressCB.DataSource = null;
             rmvAddressCB.ValueMember = "idAddress"; 
             rmvAddressCB.DisplayMember = "address";
-            rmvAddressCB.DataSource = addressDAO.getAdress();
+            rmvAddressCB.DataSource = addressDAO.getUserAddress(user);
             
             //ModAddressComboBox items
             modcb.DataSource = null;
             modcb.ValueMember = "idAddress"; 
             modcb.DisplayMember = "address";
-            modcb.DataSource = addressDAO.getAdress();
+            modcb.DataSource = addressDAO.getUserAddress(user);
             
-            direccionesDG.DataSource = addressDAO.getAddressdt();
+            direccionesDG.DataSource = addressDAO.getUserAddressdt(user);
         }
     }
 }

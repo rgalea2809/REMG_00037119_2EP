@@ -34,7 +34,7 @@ namespace Hugo.DataAccessObjects
                     throw new EmptyInputFieldException("Debe completar todos los campos!");
                 }
 
-                string nQ = $"INSERT INTO product(\"idBusiness\", name) " +
+                string nQ = $"INSERT INTO product(idBusiness, name) " +
                             $"VALUES({idBusiness}, '{name}')";
                 dbHelper.ExecuteNonQuery(nQ);
                 MessageBox.Show($"Se ha agregado el Producto '{name}' correctamente");
@@ -56,8 +56,8 @@ namespace Hugo.DataAccessObjects
             try
             {
                 string nQ = String.Format(
-                    $"DELETE FROM apporder WHERE \"idProduct\"= {idProduct}; "+
-                    $"DELETE FROM product WHERE \"idProduct\" = {idProduct}");
+                    $"DELETE FROM apporder WHERE idProduct= {idProduct}; "+
+                    $"DELETE FROM product WHERE idProduct = {idProduct}");
                 dbHelper.ExecuteNonQuery(nQ);
                 MessageBox.Show("Se ha eliminado el Producto de la base datos, " +
                                 "al igual que las ordenes relacionadas al mismo.");
