@@ -129,11 +129,13 @@
         </Compile>
         <Compile Include="CustomExceptions\EmptyInputFieldException.cs" />
         <Compile Include="DataAccessObjects\AbstractDAO.cs" />
+        <Compile Include="DataAccessObjects\addressDAO.cs" />
         <Compile Include="DataAccessObjects\apporderDAO.cs" />
         <Compile Include="DataAccessObjects\appUserDAO.cs" />
         <Compile Include="DataAccessObjects\businessDAO.cs" />
         <Compile Include="DataAccessObjects\dbHelper.cs" />
         <Compile Include="DataAccessObjects\productsDAO.cs" />
+        <Compile Include="databaseObjects\Direccion.cs" />
         <Compile Include="databaseObjects\Negocio.cs" />
         <Compile Include="databaseObjects\Orden.cs" />
         <Compile Include="databaseObjects\Producto.cs" />
@@ -143,6 +145,24 @@
         </Compile>
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
+        </Compile>
+        <Compile Include="NormalUC\direcciones.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="NormalUC\direcciones.Designer.cs">
+          <DependentUpon>direcciones.cs</DependentUpon>
+        </Compile>
+        <Compile Include="NormalUC\ordenesNormal.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="NormalUC\ordenesNormal.Designer.cs">
+          <DependentUpon>ordenesNormal.cs</DependentUpon>
+        </Compile>
+        <Compile Include="normalUserWF.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="normalUserWF.Designer.cs">
+          <DependentUpon>normalUserWF.cs</DependentUpon>
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,6 +186,15 @@
         </EmbeddedResource>
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="NormalUC\direcciones.resx">
+          <DependentUpon>direcciones.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="NormalUC\ordenesNormal.resx">
+          <DependentUpon>ordenesNormal.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="normalUserWF.resx">
+          <DependentUpon>normalUserWF.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>

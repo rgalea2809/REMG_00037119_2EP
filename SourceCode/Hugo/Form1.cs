@@ -46,7 +46,9 @@ namespace Hugo
                 }
                 else
                 {
-                    MessageBox.Show("Bienvenido!");
+                    normalUserWF ventanaNormal = new normalUserWF(u);
+                    ventanaNormal.Show();
+                    this.Hide();
                 }
             }
             else

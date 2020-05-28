@@ -95,7 +95,8 @@ namespace Hugo.DataAccessObjects
                     $"DELETE FROM appuser WHERE username = '{u.username}'");
 
                 dbHelper.ExecuteNonQuery(nQ);
-                MessageBox.Show("Se ha eliminado el usuario");
+                MessageBox.Show("Se ha eliminado el usuario, " +
+                                "junto a las ordenes y direcciones relacionadas");
             }
             catch (Exception exception)
             {
